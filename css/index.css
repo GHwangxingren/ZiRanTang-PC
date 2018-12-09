@@ -1,0 +1,190 @@
+html,body.main{
+    width: 100%;
+    height: 100%;
+}
+.main>div{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 33.33%;
+}
+.first-line {
+    top: 0;
+}
+.second-line{
+    top: 33.33%;
+}
+.third-line{
+    top: 66.66%;
+}
+.item{
+    position:absolute;
+    width: 33.33%;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+}
+.item:nth-child(1){
+    left: 0;
+}
+.item:nth-child(2){
+    left: 33.33%;
+}
+.item:nth-child(3){
+    left: 66.66%;
+}
+.pic{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index: 2;
+}
+.first-line .item:nth-child(1) .pic{
+    background-image: url("../images/pic1.jpg");
+}
+.first-line .item:nth-child(2) .pic{
+    background-image: url("../images/pic2.jpg");
+}
+.first-line .item:nth-child(3) .pic{
+    background-image: url("../images/pic3.jpg");
+}
+.second-line .item:nth-child(1) .pic{
+    background-image: url("../images/pic4.png");
+}
+.second-line .item:nth-child(2){
+    background-color: #00a77b;
+}
+.second-line .item:nth-child(3) .pic{
+    background-image: url("../images/pic6.jpg");
+}
+.third-line .item:nth-child(1) .pic{
+    background-image: url("../images/pic7.jpg");
+}
+.third-line .item:nth-child(2) .pic-up{
+    background-image: url("../images/pic8.jpg");
+    transition: all 1s ease;
+}
+.third-line .item:nth-child(2) .pic-down{
+    background-image: url("../images/route.jpg");
+    z-index: 1;
+    transition: all 1s ease;
+}
+/*动画效果*/
+.item:hover .pic-up{
+    transform: rotateY(90deg);
+    transform-origin: 100% 50%;
+}
+.item:hover .pic-down{
+    transform: rotateY(360deg);
+}
+.third-line .item:nth-child(3) .pic{
+    background-image: url("../images/pic9.jpg");
+}
+.bg-pic img {
+    position: absolute;
+    width: 40%;
+    top: 17%;
+    right: 50%;
+    margin-right: -21%;
+}
+video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50%;
+    margin-left: -50%;
+    width: 100%;
+}
+.item:hover video{
+    z-index: 3;
+}
+p{
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 0.5px;
+    font-size: 10px;
+}
+.para1{
+    bottom: 31px;
+    left: 80px;
+}
+.para1 a{
+    color: #fff;
+}
+ .para2{
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+}
+.item .desc{
+    position: absolute;
+    left: 30px;
+    top: 25%;
+    font-size: 10px;
+    font-weight: 300;
+    z-index: 3;
+}
+.item .desc span{
+    display: block;
+    color: #00a77b;
+    letter-spacing: 3px;
+}
+.item .desc a{
+    display: block;
+    color: #000;
+    font-size: 20px;
+    margin-top: 5px;
+}
+.item:hover .desc{
+    display: none;
+}
+.item .code{
+    position: absolute;
+    bottom: 50px;
+    left: 95px;
+    width: 100%;
+    text-align: center;
+}
+.item .code li{
+    float: left;
+    margin: 0 5px;
+}
+.item .code li a i{
+    color: #fff;
+    font-size: 26px;
+}
+.item .submenu{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    opacity: 0.5;
+    padding: 2% 0;
+    background: #f6f5f5;
+    z-index: -10;
+}
+.item:hover .submenu{
+    z-index: 5;
+}
+.item .submenu ul{
+    display: inline-block;
+    margin: 0 auto;
+}
+.item .submenu ul li{
+    float: left;
+}
+.item .submenu ul li a{
+    display: block;
+    font-size: 8px;
+    color: #000;
+    padding: 0 10px;
+    border-right: 1px solid  #000;
+}
+.item .submenu ul .last a{
+    border-right: none;
+}
